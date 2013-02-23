@@ -2,42 +2,42 @@
 
 ## Models
 
-[ ] Post
-[ ] Post/Like
-[ ] Post/Comment
-[ ] Post/Comment/Like
-[ ] User
-[ ] Role
-[ ] Role_User
-[ ] Tag
+- [ ] Post
+- [ ] Post/Like
+- [ ] Post/Comment
+- [ ] Post/Comment/Like
+- [ ] User
+- [ ] Role
+- [ ] Role_User
+- [ ] Tag
 
 ## Technical Deps
 
-[x] ember-rails
-[x] jquery-rails
-[x] coffee
-[x] sass
-[x] ruby-debug19
-[x] ruby-debug-ide19
-[x] thin
-[x] therubyracer
-[ ] emberjs in version 1.0 (latest RC if needed)
-[ ] phantomjs
-[ ] twitter-bootstrap
-[ ] eventmachine
-[ ] i18n-js
-[ ] gem "omniauth"
-[ ] gem "omniauth-openid"
-[ ] gem "openid-redis-store"
-[ ] gem "omniauth-facebook"
-[ ] gem "omniauth-twitter"
+- [x] ember-rails
+- [x] jquery-rails
+- [x] coffee
+- [x] sass
+- [x] ruby-debug19
+- [x] ruby-debug-ide19
+- [x] thin
+- [x] therubyracer
+- [ ] emberjs in version 1.0 (latest RC if needed)
+- [ ] phantomjs
+- [ ] twitter-bootstrap
+- [ ] eventmachine
+- [ ] i18n-js
+- [ ] gem "omniauth"
+- [ ] gem "omniauth-openid"
+- [ ] gem "openid-redis-store"
+- [ ] gem "omniauth-facebook"
+- [ ] gem "omniauth-twitter"
 
 ## Later
-[ ] redis
-[ ] redis-rails
-[ ] sidekiq (http://mperham.github.com/sidekiq/)
-[ ] vestal_versions oder paper_trail
-[ ] travis
+- [ ] redis
+- [ ] redis-rails
+- [ ] sidekiq (http://mperham.github.com/sidekiq/)
+- [ ] vestal_versions oder paper_trail
+- [ ] travis
 ```yaml
 (.travis.yml
 language: ruby
@@ -51,4 +51,4 @@ before_script:
 script: 'rake spec && bundle exec guard-jasmine --server-timeout=60'
 services:
   - redis-server)
-```yaml
+```

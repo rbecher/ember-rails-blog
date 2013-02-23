@@ -16,4 +16,4 @@ This should suffice, no need to update to not yet finished Ruby 2.0 (and probabl
 
 ## Todos
 
-For a detailed list see link:TODO.md
+For a detailed list see [TODO.md](TODO.md)
