@@ -1,0 +1,3 @@
+EmberBlog.Router.map(function() {
+
+});
