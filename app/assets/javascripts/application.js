@@ -18,4 +18,6 @@
 //= require_self
 //= require ember_blog
 EmberBlog = Ember.Application.create();
+// Loads all Bootstrap javascripts
+//= require bootstrap
 //= require_tree .
