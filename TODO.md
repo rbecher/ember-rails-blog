@@ -21,6 +21,7 @@
 - [x] ruby-debug-ide19
 - [x] thin
 - [x] therubyracer
+- [x] haml
 - [ ] emberjs in version 1.0 (latest RC if needed)
 - [ ] phantomjs
 - [ ] twitter-bootstrap

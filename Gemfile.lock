@@ -57,6 +57,8 @@ GEM
     eventmachine (1.0.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    haml (4.0.0)
+      tilt
     handlebars-source (1.0.9)
     hike (1.2.1)
     i18n (0.6.1)
@@ -145,6 +147,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   ember-rails
+  haml
   jquery-rails
   rails (= 3.2.12)
   ruby-debug-ide19
