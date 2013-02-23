@@ -22,9 +22,9 @@
 - [x] thin
 - [x] therubyracer
 - [x] haml
+- [x] twitter-bootstrap
 - [ ] emberjs in version 1.0 (latest RC if needed)
 - [ ] phantomjs
-- [ ] twitter-bootstrap
 - [ ] eventmachine
 - [ ] i18n-js
 - [ ] gem "omniauth"
@@ -40,7 +40,6 @@
 - [ ] vestal_versions oder paper_trail
 - [ ] travis
 ```yaml
-(.travis.yml
 language: ruby
 rvm:
   - 1.9.3
@@ -51,5 +50,5 @@ before_script:
   - rake db:migrate
 script: 'rake spec && bundle exec guard-jasmine --server-timeout=60'
 services:
-  - redis-server)
+  - redis-server
 ```
