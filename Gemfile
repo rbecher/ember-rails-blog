@@ -8,18 +8,18 @@ gem 'rails', '3.2.12'
 gem 'sqlite3'
 
 gem 'ember-rails'
+#gem 'ember-source', '~>1.0.0.rc1.1'
 
 gem 'haml'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails',     '~> 3.2.3'
   gem 'bootstrap-sass', '~> 2.3.0.1'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'therubyracer', :require => 'v8'
+  gem 'coffee-rails',   '~> 3.2.1'
+  gem 'uglifier',       '>= 1.0.3'
+  gem 'therubyracer',   :require => 'v8'
 end
 
 gem 'jquery-rails'
@@ -36,19 +36,34 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-group :development do
-  gem 'ruby-debug19'
-  gem 'ruby-debug-ide19'
+group :development, :test do
+  # this does not work at all for me =/
+  # find the following in the vendor/gems dir!
+  # gem 'linecache19', '~>0.5.13'
+  # gem 'ruby-debug19', '~>0.11.6', require: 'ruby-debug'
+  # gem 'ruby-debug-ide19', '~>0.4.12'
+  # gem 'ruby_core_source', '~>0.1.5'
+  # /find
+  # gem 'ruby-debug-base19x', '~>0.11.30.pre11', require: 'ruby-debug-base19', git: 'git://github.com/ruby-debug/ruby-debug-base19.git'
+  # gem 'debugger-ruby_core_source', '~>1.1.4'
+  gem 'debugger'
+  gem "debugger-pry", :require => "debugger/pry"
 end
 
 group :development, :test do
-  gem 'guard-rspec', '~> 2.4.1'
-  gem 'rb-inotify', '~> 0.8.8', :require => false
-  gem 'rb-fsevent', :require => false
-  gem 'rb-fchange', :require => false
-  gem 'libnotify'
   gem 'rspec', '~> 2.13.0'
   gem 'rspec-rails', '~> 2.13.0'
+end
+
+group :test do
+  gem 'guard-rspec', '~> 2.4.1'
+  gem 'rb-inotify', '~> 0.9.0', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-fchange', require: false
+  gem 'libnotify'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
 end
 
 gem 'thin'
