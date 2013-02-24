@@ -23,6 +23,8 @@
 - [x] therubyracer
 - [x] haml
 - [x] twitter-bootstrap
+- [x] rspec
+- [x] guard
 - [ ] emberjs in version 1.0 (latest RC if needed)
 - [ ] phantomjs
 - [ ] eventmachine
