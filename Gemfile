@@ -12,6 +12,8 @@ gem 'ember-rails'
 
 gem 'haml'
 
+gem 'rack-cache'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -60,6 +62,8 @@ group :test do
   gem 'rb-inotify', '~> 0.9.0', require: false
   gem 'cucumber-rails', require: false
   gem 'guard-cucumber', require: false
+  gem 'cucumber-rails-training-wheels', require: false
+  gem 'json_spec', require: false
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rb-fsevent', require: false

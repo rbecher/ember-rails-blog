@@ -3,6 +3,7 @@
 ## Models
 
 - [ ] Post
+  - [ ] include pagination
 - [ ] Post/Like
 - [ ] Post/Comment
 - [ ] Post/Comment/Like
@@ -34,6 +35,7 @@
 - [ ] gem "openid-redis-store"
 - [ ] gem "omniauth-facebook"
 - [ ] gem "omniauth-twitter"
+- [ ] consider 'rails-api/rails-api'
 
 ## Later
 - [ ] redis
