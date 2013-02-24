@@ -59,6 +59,7 @@ group :test do
   gem 'guard-rspec', '~> 2.4.1'
   gem 'rb-inotify', '~> 0.9.0', require: false
   gem 'cucumber-rails', require: false
+  gem 'guard-cucumber', require: false
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rb-fsevent', require: false
