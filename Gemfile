@@ -41,4 +41,10 @@ group :development do
   gem 'ruby-debug-ide19'
 end
 
+group :development, :test do
+  gem 'guard-rspec', '~> 2.4.1'
+  gem 'rspec', '~> 2.13.0'
+  gem 'rspec-rails', '~> 2.13.0'
+end
+
 gem 'thin'
