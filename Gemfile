@@ -43,7 +43,10 @@ end
 
 group :development, :test do
   gem 'guard-rspec', '~> 2.4.1'
-  gem 'rb-inotify', '~> 0.8.8'
+  gem 'rb-inotify', '~> 0.8.8', :require => false
+  gem 'rb-fsevent', :require => false
+  gem 'rb-fchange', :require => false
+  gem 'libnotify'
   gem 'rspec', '~> 2.13.0'
   gem 'rspec-rails', '~> 2.13.0'
 end
