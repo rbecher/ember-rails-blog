@@ -1,3 +1,19 @@
+GIT
+  remote: git://github.com/jayzes/cucumber-api-steps.git
+  revision: a8d6f0ed36ba6588f6dbc56145c42c09ec382448
+  specs:
+    cucumber-api-steps (0.11)
+      cucumber (>= 1.2.1)
+      jsonpath (>= 0.1.2)
+      rspec (>= 2.12.0)
+
+GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: 0114e492388ff84defcd1afbbb315e547849cb96
+  specs:
+    active_model_serializers (0.5.2)
+      activemodel (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -14,8 +30,6 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
-    active_model_serializers (0.6.0)
-      activemodel (>= 3.0)
     activemodel (3.2.12)
       activesupport (= 3.2.12)
       builder (~> 3.0.0)
@@ -116,9 +130,8 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.7)
-    json_spec (1.1.0)
-      multi_json (~> 1.0)
-      rspec (~> 2.0)
+    jsonpath (0.5.1)
+      multi_json
     libnotify (0.8.0)
       ffi (>= 1.0.11)
     libv8 (3.11.8.13)
@@ -226,9 +239,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   bootstrap-sass (~> 2.3.0.1)
   capybara
   coffee-rails (~> 3.2.1)
+  cucumber-api-steps!
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner
@@ -239,7 +254,6 @@ DEPENDENCIES
   guard-rspec (~> 2.4.1)
   haml
   jquery-rails
-  json_spec
   libnotify
   rack-cache
   rails (= 3.2.12)

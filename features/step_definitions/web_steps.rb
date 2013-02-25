@@ -34,8 +34,6 @@ Given /^"(?:|I )request (?:the )(.+) of (.+)"$/ do |type, resource|
     else
       resource
   end
-  puts type_message
-  puts resource_message
   visit path_to(resource)
 end
 
