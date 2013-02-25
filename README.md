@@ -1,3 +1,4 @@
+[![Dependency Status](https://gemnasium.com/rbecher/ember-rails-blog.png)](https://gemnasium.com/rbecher/ember-rails-blog)
 # Blog using Ember.js and Rails as Backend
 
 This is rather an example and test. I want to see, how good the two techniques actually mingle.
