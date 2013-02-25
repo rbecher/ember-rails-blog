@@ -37,6 +37,15 @@ class PostsController < ApplicationController
     end
   end
 
+  # DELETE /posts/1.json
+  def destroy
+    requires_parameters(*[:id])
+    post = Post.find(params[:id])
+    post.destroy
+
+    render json: nil, status: :no_content
+  end
+
   private
 
   def minimum_parameter_keys

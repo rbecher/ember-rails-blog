@@ -84,3 +84,9 @@ Feature: Posts API
       | nothing |                               | body  |
       |         |                               | title |
       |         |                               | body  |
+
+  Scenario: Delete posts
+    When I send a DELETE request to "/posts/1"
+    Then the response status should be "204"
+    When I send a GET request to "/posts/1"
+    Then the response status should be "404"
