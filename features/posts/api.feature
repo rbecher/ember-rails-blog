@@ -15,8 +15,6 @@ Feature: Posts API
   Scenario: Index action
     When I send a GET request to "/posts"
     Then the response status should be "200"
-    #And show me the response
-    #And show me the response headers
     And the JSON response should have "$.meta.total" with the text "2"
     And the JSON response should have "$.posts[*]" with a length of 2
     And the JSON response should have "$..posts[0].title" with the text "One"
@@ -25,15 +23,32 @@ Feature: Posts API
   Scenario: View action
     When I send a GET request to "/posts/1"
     Then the response status should be "200"
-    #And show me the response
-    #And show me the response headers
     And the JSON response should have "$.post.title" with the text "One"
     And the JSON response should have "$.post.body" with the text "Text 1"
 
-  Scenario: Create action (successfully)
+  Scenario Outline: successful post creation
     When I send a POST request to "/posts" with the following:
       """
-      {"title":"New Title","body":"Nothing else matters ..."}
+      {"title":"<title>>","body":"<body>"}
       """
-    And show me the response headers
     Then the response status should be "201"
+
+    Examples:
+      | title | body                          |
+      | New 1 | Nothing else matters ...      |
+      | New 2 | That's how you test properly  |
+
+  Scenario Outline: unsuccessful post creation
+    When I send a POST request to "/posts" with the following:
+      """
+      {"title":"<title>","body":"<body>"}
+      """
+    Then the response status should be "422"
+    And the JSON response should have "$.<key>" with a length of 1
+
+    Examples:
+      | title   | body                          | key   |
+      |         | I fail without title          | title |
+      | nothing |                               | body  |
+      |         |                               | title |
+      |         |                               | body  |
