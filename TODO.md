@@ -2,7 +2,7 @@
 
 ## Models
 
-- [ ] Post
+- [x] Post
   - [ ] include pagination
 - [ ] Post/Like
 - [ ] Post/Comment
@@ -26,6 +26,7 @@
 - [x] twitter-bootstrap
 - [x] rspec
 - [x] guard
+- [x] rails-api
 - [ ] emberjs in version 1.0 (latest RC if needed)
 - [ ] phantomjs
 - [ ] eventmachine
@@ -35,7 +36,6 @@
 - [ ] gem "openid-redis-store"
 - [ ] gem "omniauth-facebook"
 - [ ] gem "omniauth-twitter"
-- [ ] consider 'rails-api/rails-api'
 
 ## Later
 - [ ] redis
