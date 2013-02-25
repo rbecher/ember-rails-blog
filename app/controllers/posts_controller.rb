@@ -18,7 +18,20 @@ class PostsController < ApplicationController
     requires_parameters(*minimum_parameter_keys)
     post = Post.create(min_params)
     if post.save
-      render json: nil, location: post_path(post), status: :created
+      render json: post, location: post_path(post), status: :created
+    else
+      render json: post.errors, status: :unprocessable_entity
+    end
+  end
+
+  # PUT /posts/1.json
+  def update
+    requires_parameters(*minimum_parameter_keys)
+    requires_parameters(*[:id])
+    post = Post.find(params[:id])
+
+    if post.update_attributes(params[:post])
+      render json: nil, status: :no_content
     else
       render json: post.errors, status: :unprocessable_entity
     end
