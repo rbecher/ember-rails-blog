@@ -24,6 +24,15 @@ GIT
     active_model_serializers (0.5.2)
       activemodel (>= 3.0)
 
+GIT
+  remote: git://github.com/rails-api/rails-api.git
+  revision: 9ad1575bbe114319de1fbf4c4eb7f552e1052b8c
+  specs:
+    rails-api (0.0.3)
+      actionpack (>= 3.2.11)
+      railties (>= 3.2.11)
+      tzinfo (~> 0.3.31)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -268,6 +277,7 @@ DEPENDENCIES
   libnotify
   rack-cache
   rails (= 3.2.12)
+  rails-api!
   rails-i18n
   rb-fchange
   rb-fsevent
