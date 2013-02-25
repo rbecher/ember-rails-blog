@@ -1,6 +1,5 @@
-class ApplicationController < ActionController::API
-  #include ActionController::MimeResponds
-  #respond_to :json
+class ApplicationController < ActionController::Base
+  respond_to :json
 
   private
 
