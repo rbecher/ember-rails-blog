@@ -33,6 +33,10 @@ Feature: Posts API
       {"title":"<title>","body":"<body>"}
       """
     Then the response status should be "201"
+    When I request the newly created resource
+    Then the response status should be "200"
+    And the JSON response should have "$.post.title" with the text "<title>"
+    And the JSON response should have "$.post.body" with the text "<body>"
 
     Examples:
       | title | body                          |
@@ -54,21 +58,21 @@ Feature: Posts API
       |         |                               | title |
       |         |                               | body  |
 
-  Scenario Outline: successful post changes
-    When I send a PUT request to "/posts/1" with the following:
+  Scenario Outline: successful post change
+    When I send a PUT request to "/posts/<id>" with the following:
       """
       {"title":"<title>","body":"<body>"}
       """
     Then the response status should be "204"
-    When I send a GET request to "/posts/1"
+    When I send a GET request to "/posts/<id>"
     Then the response status should be "200"
     And the JSON response should have "$.post.title" with the text "<title>"
     And the JSON response should have "$.post.body" with the text "<body>"
 
     Examples:
-      | title | body                          |
-      | One   | Text 1                        |
-      | New 1 | That's how you test properly  |
+      |id | title | body                          |
+      | 1 | New 1 | Text 1                        |
+      | 2 | Two   | That's how you test properly  |
 
   Scenario Outline: unsuccessful post changes
     When I send a PUT request to "/posts/1" with the following:
@@ -85,8 +89,10 @@ Feature: Posts API
       |         |                               | title |
       |         |                               | body  |
 
+  @allow-rescue
   Scenario: Delete posts
     When I send a DELETE request to "/posts/1"
     Then the response status should be "204"
-    When I send a GET request to "/posts/1"
+    When I am simulating a remote request
+    Then I send a GET request to "/posts/1"
     Then the response status should be "404"

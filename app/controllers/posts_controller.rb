@@ -24,14 +24,14 @@ class PostsController < ApplicationController
     end
   end
 
-  # PUT /posts/1.json
+  # PATCH|PUT /posts/1.json
   def update
     requires_parameters(*minimum_parameter_keys)
     requires_parameters(*[:id])
     post = Post.find(params[:id])
 
-    if post.update_attributes(params[:post])
-      render json: nil, status: :no_content
+    if post.update_attributes(min_params)
+      head :no_content
     else
       render json: post.errors, status: :unprocessable_entity
     end
@@ -43,7 +43,7 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.destroy
 
-    render json: nil, status: :no_content
+    head :no_content
   end
 
   private
