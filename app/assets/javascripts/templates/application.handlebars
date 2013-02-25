@@ -1,5 +1,16 @@
-<h1>Application</h1>
+<div id="header">
+    <h1>Blog</h1>
+</div>
 
-<p>Your content here.</p>
+<nav>
+    {{#linkTo "index"}}Home{{/linkTo}}
+    {{#linkTo "posts"}}Posts{{/linkTo}}
+    {{#linkTo "about"}}About{{/linkTo}}
+</nav>
 
-{{outlet}}
+<div id="content">
+    {{outlet}}
+</div>
+
+<div id="footer">
+</div>

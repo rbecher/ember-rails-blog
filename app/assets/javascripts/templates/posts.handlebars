@@ -1,5 +1,17 @@
-<h1>Posts</h1>
+<h2>Posts</h2>
 
-<p>Your content here.</p>
-
-{{outlet}}
+<div id="posts">
+    {{#each post in posts}}
+        <div class="post" id="post-{{id}}">
+            <h3>{{title}}</h3>
+            {{#if isExpanded}}
+                <div class="content">{{body}}</div>
+                <button {{action "contract"}}></button>
+            {{else}}
+                <button {{action "expand"}}>Show more...</button>
+            {{/if}}
+        </div>
+    {{else}}
+        Sorry, no posts to display
+    {{/each}}
+</div>
