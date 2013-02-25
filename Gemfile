@@ -59,6 +59,7 @@ end
 group :development, :test do
   gem 'rspec', '~> 2.13.0'
   gem 'rspec-rails', '~> 2.13.0'
+  gem 'simplecov', '0.7.1', require: false
 end
 
 group :test do
@@ -73,7 +74,6 @@ group :test do
   gem 'rb-fsevent', require: false
   gem 'rb-fchange', require: false
   gem 'libnotify'
-  gem 'simplecov', '0.7.1', :require => false
 end
 
 gem 'thin'
