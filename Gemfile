@@ -7,10 +7,10 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 
-gem 'ember-rails'
+gem 'ember-rails', github: 'emberjs/ember-rails'
 #gem 'ember-source', '~>1.0.0.rc1.1'
 
-gem "active_model_serializers", :github => "rails-api/active_model_serializers"
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 gem 'haml'
 
@@ -65,7 +65,7 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'guard-cucumber', require: false
   gem 'cucumber-rails-training-wheels', require: false
-  gem 'cucumber-api-steps', :require => false, git: 'git://github.com/jayzes/cucumber-api-steps.git'
+  gem 'cucumber-api-steps', :require => false, github: 'jayzes/cucumber-api-steps'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rb-fsevent', require: false

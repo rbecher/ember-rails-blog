@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/emberjs/ember-rails.git
+  revision: 692c459c444841cf74a6f108d50865960ee91ec8
+  specs:
+    ember-rails (0.10.1)
+      active_model_serializers
+      barber
+      execjs (>= 1.2)
+      railties (>= 3.1)
+
+GIT
   remote: git://github.com/jayzes/cucumber-api-steps.git
   revision: a8d6f0ed36ba6588f6dbc56145c42c09ec382448
   specs:
@@ -94,11 +104,6 @@ GEM
       pry (>= 0.9.9)
     debugger-ruby_core_source (1.2.0)
     diff-lcs (1.2.1)
-    ember-rails (0.10.0)
-      active_model_serializers
-      barber
-      execjs (>= 1.2)
-      railties (>= 3.1)
     ember-source (1.0.0.pre4.1)
       handlebars-source (>= 1.0.0.rc2)
     erubis (2.7.0)
@@ -178,7 +183,7 @@ GEM
     rb-fsevent (0.9.3)
     rb-inotify (0.9.0)
       ffi (>= 0.5.0)
-    rdoc (3.12.1)
+    rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.2)
     rspec (2.13.0)
@@ -253,7 +258,7 @@ DEPENDENCIES
   database_cleaner
   debugger
   debugger-pry
-  ember-rails
+  ember-rails!
   guard-cucumber
   guard-rspec (~> 2.4.1)
   haml
