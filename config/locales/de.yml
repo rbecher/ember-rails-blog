@@ -1,0 +1,6 @@
+de:
+  activerecord:
+    attributes:
+      post:
+        title: Titel
+        body: Inhalt
