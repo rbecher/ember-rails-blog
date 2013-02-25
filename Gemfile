@@ -71,6 +71,7 @@ group :test do
   gem 'rb-fsevent', require: false
   gem 'rb-fchange', require: false
   gem 'libnotify'
+  gem 'simplecov', '0.7.1', :require => false
 end
 
 gem 'thin'

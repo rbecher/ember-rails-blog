@@ -1,6 +1,6 @@
 EmberBlog::Application.routes.draw do
   constraints format: /json/ do
-    resources :posts
+    resources :posts, defaults: { format: :json }
   end
 
   # The priority is based upon order of creation:
