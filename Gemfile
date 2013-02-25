@@ -75,5 +75,8 @@ group :test do
   gem 'rb-fchange', require: false
   gem 'libnotify'
 end
+group :development do
+  gem "coffee-script-redux-debugger", github: "JetBrains/coffee-script-redux-debugger", require: false
+end
 
 gem 'thin'

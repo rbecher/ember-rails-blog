@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/JetBrains/coffee-script-redux-debugger.git
+  revision: 45ab4936bc35d5150dd0995833f2ab730ac8bd37
+  specs:
+    coffee-script-redux-debugger (0.0.1)
+      coffee-script
+      execjs
+      sprockets
+
+GIT
   remote: git://github.com/emberjs/ember-rails.git
   revision: 692c459c444841cf74a6f108d50865960ee91ec8
   specs:
@@ -254,6 +263,7 @@ DEPENDENCIES
   bootstrap-sass (~> 2.3.0.1)
   capybara
   coffee-rails (~> 3.2.1)
+  coffee-script-redux-debugger!
   cucumber-api-steps!
   cucumber-rails
   cucumber-rails-training-wheels
