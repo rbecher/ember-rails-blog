@@ -1,17 +1,12 @@
-<h2>Posts</h2>
+<h2>Posts {{subtitle}}</h2>
 
 <div id="posts">
-    {{#each post in posts}}
-        <div class="post" id="post-{{id}}">
-            <h3>{{title}}</h3>
-            {{#if isExpanded}}
-                <div class="content">{{body}}</div>
-                <button {{action "contract"}}></button>
-            {{else}}
-                <button {{action "expand"}}>Show more...</button>
-            {{/if}}
-        </div>
+    {{!--debugger --}}
+    <ul>
+    {{#each post in controller}}
+        {{view EmberBlog.PostInListView contentBinding="post"}}
     {{else}}
         Sorry, no posts to display
     {{/each}}
+    </ul>
 </div>

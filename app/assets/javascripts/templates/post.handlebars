@@ -1,0 +1,10 @@
+<div class="post" id="post-{{id}}">
+    <h3>{{title}}</h3>
+    {{createdAt}}
+    {{#if isExpanded}}
+        <div class="content">{{body}}</div>
+        <button {{action "contract"}}></button>
+    {{else}}
+        <button {{action "expand"}}>Show more...</button>
+    {{/if}}
+</div>
