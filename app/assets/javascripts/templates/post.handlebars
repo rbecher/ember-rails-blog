@@ -3,7 +3,7 @@
     {{createdAt}}
     {{#if isExpanded}}
         <div class="content">{{body}}</div>
-        <button {{action "contract"}}></button>
+        <button {{action "contract"}}>Hide</button>
     {{else}}
         <button {{action "expand"}}>Show more...</button>
     {{/if}}
