@@ -7,10 +7,17 @@
 - [ ] Post/Like
 - [ ] Post/Comment
 - [ ] Post/Comment/Like
+- [ ] Post/Comment/Gravatars
+- [ ] Tag (for Posts)
 - [ ] User
 - [ ] Role
-- [ ] Role_User
-- [ ] Tag
+- [ ] Role_User (?)
+
+## Behaviour
+ - [ ] Approve comments
+ - [ ] No need to approve comments for known and trusted users
+ - [ ] Navigation to Posts with Tag
+ - [ ] Top list of Posts (by comments / views)
 
 ## Technical Deps
 
