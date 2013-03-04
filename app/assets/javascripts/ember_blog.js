@@ -1,3 +1,7 @@
+EmberBlog = Ember.Application.create({
+    LOG_TRANSITIONS: true,
+    LOG_BINDINGS : true
+});
 //= require ./store
 //= require_tree ./models
 //= require_tree ./controllers
