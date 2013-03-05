@@ -5,6 +5,10 @@ EmberBlog::Application.routes.draw do
     resources :posts, defaults: { format: :json }
   end
 
+  constraints format: /json/ do
+    resources :comments, defaults: { format: :json }
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
