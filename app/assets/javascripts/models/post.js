@@ -1,4 +1,6 @@
 EmberBlog.Post = DS.Model.extend({
+    comments: DS.hasMany('EmberBlog.Comment'),
+
     title: DS.attr('string'),
     body: DS.attr('string'),
     createdAt: DS.attr('date'),
