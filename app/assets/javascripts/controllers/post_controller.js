@@ -1,4 +1,6 @@
 EmberBlog.PostController = Ember.ObjectController.extend({
+    needs: "comments",
+
     content: null,
 
     // initial value
