@@ -12,3 +12,8 @@ posts = Post.create([
     {title: "Third", body: "Text of third post"}
 ])
 
+comments = Comment.create([
+    {content: "Ein Kommentar.", post_id: 1},
+    {content: "Noch einer.", post_id: 1},
+    {content: "Und noch einer.", post_id: 1}
+])
