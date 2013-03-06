@@ -1,17 +1,14 @@
 <div class="post" {{bindAttr id="htmlId"}}>
     <h3>{{title}}</h3>
     {{createdAt}}
-    {{#if isExpanded}}
-        <div class="content">{{body}}</div>
-        <button {{action "contract"}}>Hide</button>
-        <br/>
-        <ul class="unstyled">
-            {{#each comment in controllers.posts}}
-                <li>comment.content</li>
-                <br/>
-            {{/each}}
-        </ul>
-    {{else}}
-        <button {{action "expand"}}>Show more...</button>
-    {{/if}}
+    <div class="content">{{body}}</div>
+    <br/>
+    {{ log this }}
+    <ul class="unstyled">
+        {{#each comment in comments}}
+            <li>{{comment.content}}</li>
+        {{else}}
+            Noch keine Kommentare
+        {{/each}}
+    </ul>
 </div>
