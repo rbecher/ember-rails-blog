@@ -12,6 +12,7 @@ posts = Post.create([
     {title: "Second", body: "Text of second post"},
     {title: "Third", body: "Text of third post"}
 ])
+posts[0].tag_list = "blaaaaa"
 
 comments = Comment.create([
     {content: "Ein Kommentar.", post_id: 1},
@@ -19,3 +20,7 @@ comments = Comment.create([
     {content: "Und noch einer.", post_id: 1},
     {content: "Der hier gehört zum 2. Post.", post_id: 2}
 ])
+
+#tags = ActsAsTaggableOn::Tag.create([{name: "erster Post"}])
+
+#taggings = ActsAsTaggableOn::Tagging([{tag_id: 1, taggable_id:1}])
