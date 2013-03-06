@@ -4,7 +4,6 @@
     {{!--debugger --}}
     <ul>
     {{#each post in controller}}
-        {{log post}}
         {{view EmberBlog.PostInListView contentBinding="post"}}
     {{else}}
         Sorry, no posts to display
