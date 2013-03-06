@@ -3,9 +3,6 @@ EmberBlog::Application.routes.draw do
 
   constraints format: /json/ do
     resources :posts, defaults: { format: :json }
-  end
-
-  constraints format: /json/ do
     resources :comments, defaults: { format: :json }
   end
 
