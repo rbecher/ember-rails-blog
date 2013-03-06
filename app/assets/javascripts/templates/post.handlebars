@@ -3,6 +3,11 @@
     {{createdAt}}
     <div class="content">{{body}}</div>
     <br/>
+    {{#each tag tags}}
+        {{tag.name}}
+    {{/each}}
+    <br/>
+    <br/>
     {{ log this }}
     <ul class="unstyled">
         {{#each comment in comments}}
