@@ -6,7 +6,7 @@
         <ul class="inline">
         Tags:
         {{#each tag in tagList}}
-            <li>{{tag}}</li>
+            <li>{{#linkTo tagged tag}}{{tag}}{{/linkTo}}</li>
         {{else}}
             Keine Tags vorhanden. Hinzufügen?
         {{/each}}
