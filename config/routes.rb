@@ -1,10 +1,11 @@
 EmberBlog::Application.routes.draw do
-  get "home/index"
 
   constraints format: /json/ do
     resources :posts, defaults: { format: :json }
     resources :comments, defaults: { format: :json }
   end
+
+  root to: "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
