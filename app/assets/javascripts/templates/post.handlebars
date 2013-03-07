@@ -2,12 +2,16 @@
     <h3>{{title}}</h3>
     {{createdAt}}
     <div class="content">{{body}}</div>
-    <br/>
-    {{#each tag tags}}
-        {{tag.name}}
-    {{/each}}
-    <br/>
-    <br/>
+    <div class="taglist">
+        <ul class="inline">
+        Tags:
+        {{#each tag in tagList}}
+            <li>{{tag}}</li>
+        {{else}}
+            Keine Tags vorhanden. Hinzufügen?
+        {{/each}}
+        </ul>
+    </div>
     {{ log this }}
     <ul class="unstyled">
         {{#each comment in comments}}
