@@ -4,6 +4,7 @@ EmberBlog.Router.map(function() {
         //this.route('new');
     });
     this.resource('post', { path: '/posts/:post_id' });
+    this.resource('tagged', { path: '/t/:tag_name' });
     this.route("about");
 });
 
