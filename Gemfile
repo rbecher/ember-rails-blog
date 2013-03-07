@@ -20,6 +20,8 @@ gem 'rails-i18n'
 
 gem 'acts-as-taggable-on', '~> 2.3.1'
 
+gem 'devise', '2.2.3'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
