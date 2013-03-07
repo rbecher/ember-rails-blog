@@ -1,0 +1,12 @@
+<h2>Tagged Posts</h2>
+
+<div id="posts">
+    {{log controller}}
+    <ul>
+    {{#each post in controller}}
+        {{view EmberBlog.PostInListView contentBinding="post"}}
+    {{else}}
+        Sorry, no posts to display
+    {{/each}}
+    </ul>
+</div>
