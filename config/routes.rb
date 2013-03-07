@@ -1,5 +1,7 @@
 EmberBlog::Application.routes.draw do
 
+  devise_for :users
+
   constraints format: /json/ do
     resources :posts, defaults: { format: :json }
     resources :comments, defaults: { format: :json }
