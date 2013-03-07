@@ -5,7 +5,7 @@
 - [x] Post
   - [ ] include pagination
 - [ ] Post/Like
-- [ ] Post/Comment
+- [x] Post/Comment
 - [ ] Post/Comment/Like
 - [ ] Post/Comment/Gravatars
 - [ ] Tag (for Posts)
