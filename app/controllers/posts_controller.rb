@@ -2,7 +2,11 @@ class PostsController < ApplicationController
 
   # GET /posts.json
   def index
-    posts = Post.all
+    if params[:tag_name]
+      posts = Post.tagged_with(params[:tag_name])
+    else
+      posts = Post.all
+    end
     render json: posts, meta: { total: posts.count }
   end
 
