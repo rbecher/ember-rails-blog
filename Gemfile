@@ -22,6 +22,17 @@ gem 'acts-as-taggable-on', '~> 2.3.1'
 
 gem 'devise', '2.2.3'
 
+# OmniAuth
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-linkedin-oauth2'
+gem 'omniauth-openid'
+gem 'omniauth-twitter'
+gem 'omniauth-xing'
+
+gem 'twitter', '4.4.3'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
