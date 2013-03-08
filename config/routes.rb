@@ -1,6 +1,12 @@
 EmberBlog::Application.routes.draw do
 
-  devise_for :users
+  get "authentications/test"
+
+  match '/auth/:provider/callback' => 'authentications#create'
+
+  devise_for :users, controllers: {registrations: "registrations"}   #omniauth_callbacks: "authentications",
+
+  resources :authentications
 
   constraints format: /json/ do
     resources :posts, defaults: { format: :json }
