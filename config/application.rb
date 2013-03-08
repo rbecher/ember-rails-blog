@@ -62,5 +62,9 @@ module EmberBlog
 
     # Use production variant of ember (alternative would be :development)
    config.ember.variant = :development
+
+   config.to_prepare do
+     DeviseController.respond_to :html, :json
+   end
   end
 end
