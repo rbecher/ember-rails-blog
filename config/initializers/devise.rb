@@ -213,7 +213,13 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+  require 'openid/store/filesystem'
+  config.omniauth :facebook, 'APP_ID', 'APP_SECRET', :client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}
+  config.omniauth :google_oauth2, "APP_ID", "APP_SECRET", { access_type: "offline", approval_prompt: "" }
+  config.omniauth :linkedin_oauth2, ENV['LINKEDIN_KEY'], ENV['LINKEDIN_SECRET']
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp')
+  config.omniauth :twitter, "CONSUMER_KEY", "CONSUMER_SECRET"
+  config.omniauth :xing, "consumer_key", "consumer_secret"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
