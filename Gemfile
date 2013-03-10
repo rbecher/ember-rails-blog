@@ -31,7 +31,7 @@ gem 'omniauth-openid'
 gem 'omniauth-twitter'
 gem 'omniauth-xing'
 
-gem 'twitter', '4.4.3'
+gem 'twitter', '4.6.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -78,7 +78,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'guard-rspec', '~> 2.4.1'
+  gem 'guard-rspec', '~> 2.5.0'
   gem 'rb-inotify', '~> 0.9.0', require: false
   gem 'cucumber-rails', require: false
   gem 'guard-cucumber', require: false
